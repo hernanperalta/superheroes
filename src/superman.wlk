@@ -9,9 +9,7 @@ object superman {
 		identidadSecreta = unaIdentidadSecreta    	
     }
 
-    
     method esPoderoso() {
     	return celulasSolares > 20000
     } 
-
 }
