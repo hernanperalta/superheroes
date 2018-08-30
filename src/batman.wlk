@@ -1,12 +1,15 @@
 object batman {
    var identidadSecreta = "Bruce Wayne"
 
-   method identidadSecreta() = 
-   		identidadSecreta
+   method identidadSecreta(){
+   		return identidadSecreta 
+   } 
 
    method identidadSecreta(unaIdentidadSecreta){
 		identidadSecreta = unaIdentidadSecreta
    }
 
-   method esPoderoso() = true
+   method esPoderoso(){
+   		return true
+   	}
 }
