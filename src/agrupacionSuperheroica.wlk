@@ -5,24 +5,31 @@ import elZorro.*
 object agrupacionSuperheroica {
 	var integrantes = #{}
 
-	method agregarSuperheroe(unSuperheroe) { 
-		integrantes.add(unSuperheroe) 
+	method agregarSuperheroe(unSuperheroe){ 
+		integrantes.add(unSuperheroe)
 	}
 
-	method echarSuperheroe(unSuperheroe) { 
+	method echarSuperheroe(unSuperheroe){ 
 		integrantes.remove(unSuperheroe) 
 	}
 
-	method cantidadDeIntegrantes() = integrantes.size()
+	method cantidadDeIntegrantes(){
+		return integrantes.size()
+	}
 
-	method integrantesPoderosos() =
-    	integrantes.filter({ integrante => integrante.esPoderoso() })
+	method integrantesPoderosos(){
+		return integrantes.filter({ integrante => integrante.esPoderoso() }) 
+	}
  
-	method identidadesSecretas() =
-   		integrantes.map({ integrante => integrante.identidadSecreta() })
+	method identidadesSecretas(){
+		return integrantes.map({ integrante => integrante.identidadSecreta() })		
+	}
 
-	method equipoMediocre() {
-	    var noPoderosos = integrantes.filter({ integrante => !integrante.esPoderoso() })
-	    return noPoderosos.size() > (integrantes.size() / 2)
-	}	
+	method equipoMediocre(){
+		return self.integrantesNoPoderosos().size() > (self.cantidadDeIntegrantes() / 2)
+	}
+	
+	method integrantesNoPoderosos(){
+		return integrantes.filter({ integrante => !integrante.esPoderoso() }) 
+	}
 }

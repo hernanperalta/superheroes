@@ -5,16 +5,17 @@ object elZorro {
 	method identidadSecreta() =
 		identidadSecreta
 
-	method identidadSecreta(unaIdentidadSecreta) {
+	method identidadSecreta(unaIdentidadSecreta){
 		identidadSecreta = unaIdentidadSecreta		
 	}
 
-	method esPoderoso() {
-		var habilidadesPoderosas = ["volar", "super fuerza", "super rapido"]
-		habilidades.any({habilidad => habilidadesPoderosas.contains(habilidad)})
-	}
+	method esPoderoso() =
+		habilidades.any({ habilidad => self.habilidadesPoderosas().contains(habilidad) })
+	
+	method habilidadesPoderosas() =
+		["volar", "super fuerza", "super rapido"]
 
-	method aprenderHabilidad(unaHabilidad) {
+	method aprenderHabilidad(unaHabilidad){
 		habilidades.add(unaHabilidad)
 	}
 }

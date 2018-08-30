@@ -5,11 +5,11 @@ object superman {
     method identidadSecreta() =
 		identidadSecreta
 
-    method identidadSecreta(unaIdentidadSecreta) {
+    method identidadSecreta(unaIdentidadSecreta){
 		identidadSecreta = unaIdentidadSecreta    	
     }
 
-    method esPoderoso() {
+    method esPoderoso(){
     	return celulasSolares > 20000
     } 
 }
